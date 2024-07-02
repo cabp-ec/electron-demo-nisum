@@ -1,0 +1,32 @@
+/* NAV BAR */
+nav.navbar {
+}
+
+nav.navbar button span {
+  font-size: 0.9em;
+}
+
+/* ASIDE PANEL */
+div.panel-aside {
+  /*border: 1px dotted red;*/
+  overflow: hidden;
+  width: 0;
+}
+
+div.panel-aside.open {
+  min-width: 100px;
+  max-width: 300px;
+  width: 30%;
+}
+
+/* PLAYLIST */
+div.playlist ul {
+  /*border: 1px dashed red;*/
+  height: 96vh;
+  overflow: scroll;
+}
+
+div.playlist li.list-group-item .btn-close {
+  font-size: 10px;
+  height: 2em;
+}

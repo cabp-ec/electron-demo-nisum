@@ -1,0 +1,90 @@
+html,
+body {
+  height: 100vh;
+  letter-spacing: 0.05em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  /*background: #ccc;*/
+  /*background: #191919;*/
+  /*color: #f4f4f4;*/
+  font-family: Roboto,
+  -apple-system,
+  BlinkMacSystemFont,
+  'Helvetica Neue',
+  'Segoe UI',
+  'Oxygen',
+  'Ubuntu',
+  'Cantarell',
+  'Open Sans',
+  sans-serif;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+body * {
+  outline: none;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+/* ROOT */
+#root {
+  /*background: #191919;*/
+  height: 100vh;
+  width: 100%;
+}
+
+/* LOADER */
+.loader-wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+}
+
+.loader {
+  height: 4px;
+  width: 130px;
+  --c: no-repeat linear-gradient(#671cff 0 0);
+  background: var(--c), var(--c), #d7b8fc;
+  background-size: 60% 100%;
+  animation: l16 3s infinite;
+}
+
+@keyframes l16 {
+  0% {
+    background-position: -150% 0, -150% 0
+  }
+  66% {
+    background-position: 250% 0, -150% 0
+  }
+  100% {
+    background-position: 250% 0, 250% 0
+  }
+}
+
+/* DRAG & DROP */
+.win-draggable {
+  /*background: rgba(3, 0, 0, 0.25);*/
+  -webkit-app-region: drag;
+}
+
+.win-not-draggable,
+.win-not-draggable * {
+  -webkit-app-region: no-drag !important;
+}
